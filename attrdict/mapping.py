@@ -1,7 +1,11 @@
 """
 An implementation of MutableAttr.
 """
-from collections import Mapping
+import sys
+if sys.version_info >= (3,10):
+    from collections.abc import Mapping # Python 3.10+ support
+else:
+    from collections import Mapping
 
 import six
 
